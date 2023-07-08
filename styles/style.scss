@@ -61,7 +61,7 @@ body {
   font-size: $font-size-body;
   color: $transparent-blue;
   background-color: $liberty-blue;
-  background-image: url(./images/bg-desktop.png);
+  background-image: url(../images/bg-desktop.png);
   background-repeat: no-repeat;
   background-size: 100% 50%;
   background-position: bottom;
@@ -71,7 +71,7 @@ body {
   justify-content: center;
 
   @media only screen and (max-width: $layout-breakpoint-small) {
-    background-image: url(./images/bg-mobile.png);
+    background-image: url(../images/bg-mobile.png);
     background-size: cover;
     background-position: 0%;
   }
