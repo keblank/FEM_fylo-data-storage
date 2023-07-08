@@ -1,0 +1,218 @@
+/* SETTINGS */
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+/* TOOLS */
+/* - fonts */
+/* - colors */
+/* GENERAL */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+menu:not(article menu),
+ol:not(article ol),
+ul:not(article ul) {
+  list-style: none;
+}
+
+menu,
+ol,
+ul {
+  padding-left: 0;
+}
+
+ul,
+p {
+  margin: 0;
+}
+
+/* ELEMENTS */
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.4rem;
+  color: hsl(243, 100%, 93%);
+  background-color: hsl(229, 57%, 11%);
+  background-image: url(/images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-size: 100% 50%;
+  background-position: bottom;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 768px) {
+  body {
+    background-image: url(/images/bg-mobile.png);
+    background-size: cover;
+    background-position: 0%;
+  }
+}
+
+main {
+  max-width: 90%;
+  min-width: 60%;
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+}
+@media only screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+}
+
+p {
+  letter-spacing: 0.5px;
+}
+
+/* OBJECTS */
+/* COMPONENTS */
+.box__main {
+  width: 40%;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 8px 100px 8px 8px;
+  padding: 4rem 12rem 4rem 4rem;
+}
+@media only screen and (max-width: 768px) {
+  .box__main {
+    width: 100%;
+  }
+}
+
+.box__header {
+  margin-bottom: 3rem;
+}
+
+.box__actions {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.box__link {
+  min-width: 50px;
+  min-height: 50px;
+  background-color: hsl(229, 57%, 11%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.box__details {
+  width: 60%;
+  height: 80%;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 8px 8px 8px 8px;
+  padding: 4rem;
+  position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .box__details {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.box__pop-out {
+  font-weight: 700;
+  color: hsl(229, 57%, 11%);
+  text-transform: capitalize;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px 10px 0 10px;
+  min-width: 160px;
+  padding: 1rem 2rem;
+  position: absolute;
+  top: -3.5rem;
+  right: 4rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+.box__pop-out::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid hsl(0, 0%, 100%);
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+}
+@media screen and (max-width: 768px) {
+  .box__pop-out::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .box__pop-out {
+    border-radius: 10px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.box__pop-out--num {
+  font-size: 3rem;
+}
+
+.box__pop-out--label {
+  color: hsl(229, 7%, 55%);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.box__progress {
+  margin: 1.5rem 0 1rem;
+}
+
+.box__progress--total {
+  background-color: hsl(229, 57%, 11%);
+  height: 2rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 3px;
+}
+
+.box__progress--actual {
+  background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  height: 1.4rem;
+  width: 70%;
+  border-radius: 50px;
+  padding: 0 2px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.box__progress--marker {
+  background-color: hsl(0, 0%, 100%);
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+}
+
+.box__storage {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* UTILITIES */
+.text-bold {
+  font-weight: 700;
+}/*# sourceMappingURL=style.css.map */
